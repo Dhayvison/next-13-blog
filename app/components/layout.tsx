@@ -29,7 +29,6 @@ export default function Layout({ title, children }: LayoutProps) {
           <Text b color="inherit" hideIn="xs" css={{ ml: 8 }}>
             ACME
           </Text>
-          <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
         </Navbar.Brand>
         <Navbar.Content enableCursorHighlight variant="underline">
           <Navbar.Link href="/" as={Link}>
@@ -39,7 +38,7 @@ export default function Layout({ title, children }: LayoutProps) {
             Posts
           </Navbar.Link>
         </Navbar.Content>
-        <Navbar.Content>
+        <Navbar.Content hideIn="xs">
           <User
             src="https://dhayvison.github.io/img/photo.jpg"
             name="Dhayvison Braga"
