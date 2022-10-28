@@ -14,7 +14,7 @@ type LayoutProps = {
 
 export default function Layout({ title, children }: LayoutProps) {
   const { setTheme } = useNextTheme();
-  const { isDark, type } = useTheme();
+  const { isDark } = useTheme();
 
   return (
     <>
