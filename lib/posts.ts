@@ -1,24 +1,12 @@
-import { promises as fs } from "fs";
-import path from "path";
+import { Post } from "@prisma/client";
 import PostsRepository from "../repositories/PostsRepository";
 
-const getPosts = async () => {
+export const getPosts = async () => {
   const repository = new PostsRepository();
-  const posts = repository.getAll();
-
-  return await Promise.all(
-    filenames.map(async (filename) => {
-      const filePath = path.join(postsDirectory, filename);
-      const fileContents = await fs.readFile(filePath, "utf8");
-
-      return {
-        slug: filename.replace(/\.md$/, ""),
-        title: document.data.title,
-        date: document.data.date,
-        markdown: document.content,
-      };
-    })
-  );
+  return await repository.find();
 };
 
-export default getPosts;
+export const getPost = async (id: string) => {
+  const repository = new PostsRepository();
+  return await repository.findOne(id);
+};

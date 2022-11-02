@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   experimental: { appDir: true },
   images: {
-    domains: ["picsum.photos"],
+    domains: ["picsum.photos", "nextui.org"],
   },
 };
 

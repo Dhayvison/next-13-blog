@@ -12,7 +12,7 @@ export abstract class BaseRepository<T> implements IWrite<T>, IRead<T> {
     this.table = table;
   }
 
-  find(item: T): Promise<T[]> {
+  find(item?: T): Promise<T[]> {
     throw new Error("Method not implemented.");
   }
   findOne(id: string): Promise<T> {
