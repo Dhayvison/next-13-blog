@@ -115,7 +115,13 @@ export default function WritePost() {
           <Text h4>Pré-visualização</Text>
         </Card.Header>
         <Card.Body>
-          <Text h1>{title}</Text>
+          {title && (
+            <>
+              <Text h1>{title}</Text>
+              <Text h5>{new Date().toLocaleString()}</Text>
+              <Divider css={{ my: 24 }} />
+            </>
+          )}
           <ReactMarkdown>{content}</ReactMarkdown>
         </Card.Body>
       </Card>
