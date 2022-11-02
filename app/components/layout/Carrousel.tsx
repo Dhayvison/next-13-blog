@@ -2,7 +2,6 @@ import { Card, styled } from "@nextui-org/react";
 import { Box } from "./Box";
 
 export const Carrousel = styled(Box, {
-  display: "flex",
   gap: "16px",
   overflowX: "scroll",
   scrollSnapType: "x mandatory",

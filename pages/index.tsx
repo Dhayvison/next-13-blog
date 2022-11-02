@@ -187,6 +187,7 @@ export default function Home() {
           <Grid xs={4}>
             <Box
               css={{
+                flexDirection: "column",
                 ml: 100,
               }}
             >

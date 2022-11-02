@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrate": "prisma migrate dev",
+    "compose": "@docker-compose up -d"
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.10",
