@@ -53,7 +53,7 @@ export default function Posts({ posts }: PostProps) {
             <Link href={`/posts/${id}`} style={{ width: "100%" }}>
               <Card isPressable variant="bordered">
                 <Card.Image
-                  src="https://nextui.org/images/card-example-4.jpeg"
+                  src="https://picsum.photos/id/24/600/600"
                   objectFit="cover"
                   width="100%"
                   height={200}
