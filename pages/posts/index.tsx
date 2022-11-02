@@ -22,10 +22,11 @@ export default function Posts({ posts }: PostProps) {
   return (
     <Container lg css={{ mt: 24 }}>
       <Text h1>Posts</Text>
-      <Divider css={{ my: 24 }} />
+      <Divider />
       <Box
         css={{
           alignItems: "center",
+          mt: 24,
         }}
       >
         <Button light icon={<Edit />} as={Link} href="posts/write">
