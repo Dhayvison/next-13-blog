@@ -17,4 +17,9 @@ export default class PostRepository extends BaseRepository<Post> {
       },
     });
   }
+
+  async create(item: Post): Promise<boolean> {
+    const result = await this.db.post.create({ data: item });
+    return Boolean(result);
+  }
 }
