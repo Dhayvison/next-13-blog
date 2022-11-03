@@ -1,5 +1,6 @@
 import { Container, Divider, Text } from "@nextui-org/react";
 import { Post } from "@prisma/client";
+import ReactMarkdown from "react-markdown";
 
 import { getPost, getPosts } from "../../lib/posts";
 import { makeSerializable } from "../../lib/utils";
@@ -14,7 +15,7 @@ export default function PostView({ post }: PostProps) {
       <Text h1> {post.title} </Text>
       <Text h5>{new Date(post.updatedAt).toLocaleString()}</Text>
       <Divider css={{ my: 24 }} />
-      {post.content}
+      <ReactMarkdown>{post.content ?? ""}</ReactMarkdown>
     </Container>
   );
 }
